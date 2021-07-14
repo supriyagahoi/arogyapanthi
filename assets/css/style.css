@@ -687,6 +687,8 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 40px 30px;
   width: 100%;
+  background-color: #acdbec;
+  border-radius: 10px;
 }
 
 .why-us .icon-boxes .icon-box i {
@@ -889,6 +891,8 @@ section {
   position: relative;
   text-align: center;
   background: #fff;
+  background-color: #acdbec;
+  border-radius: 15px;
 }
 
 .counts .count-box i {
@@ -918,7 +922,8 @@ section {
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
-  font-size: 14px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 /*--------------------------------------------------------------
@@ -929,6 +934,8 @@ section {
   border: 1px solid #d5e1ed;
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
+  border-radius: 10px;
+  background-color: #acdbec;
 }
 
 .services .icon-box .icon {
