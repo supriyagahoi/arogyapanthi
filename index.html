@@ -941,33 +941,44 @@ So it'll become easy to find doctor for them.</div>
             </div>
 
           </div>
+          
 
-          <div class="col-lg-8 mt-5 mt-lg-0">
+           <div class="col-lg-8 mt-5 mt-lg-0">
+            <!-- action="forms/contact.php" -->
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form  method="post" role="form" class="php-email-form" name="google-sheetdata">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
+
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <!-- <label for="phone_no">Phone Number</label> -->
+                  <input type="text" name="num" data-validation="number" data-validation-allowing="negative,number"
+                   input name="color" data-validation="number" datavalidation-ignore="$" required="required" class="form-control" id="phone_no" placeholder="Phone Number">
                 </div>
+              </div><br>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
               </div>
               <div class="form-group mt-3">
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
+              </div> 
+              
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="my-3">
+              <!-- <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              </div> -->
+              <div class="text-center"><button name="submit" type="submit">Send Message</button></div>
             </form>
-
+  
           </div>
+
+      
 
         </div>
 
@@ -1062,6 +1073,22 @@ So it'll become easy to find doctor for them.</div>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<!-- contact js file -->
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxy6JRaJhtqJ2iJoY9asSphOs_bLJqJ4xZEBJayjNDgW99y0hai3WEZNoHlygJa_SI/exec'
+    const form = document.forms['google-sheetdata']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </body>
 
