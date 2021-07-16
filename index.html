@@ -1035,9 +1035,12 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Book A Demo For FREE! </h4>
             <p>To have a closer look to our services drop your Email here!</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+             <form method="post" autocomplete="off" name="google-sheet">
+                <div>
+                <input type="email" name="email" placeholder="Your Email *">
+                <input type="submit" value="Book">
+                </div>
+            </form> 
           </div>
 
         </div>
@@ -1091,6 +1094,20 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+
+ <!-- book now appointment-btn -->
+    <script>
+      const scriptURLs = 'https://script.google.com/macros/s/AKfycbw0GUri7U6lTmEq8T02vRvtBOYE6cH4IW60BKxgpWbeLj9YOZ5CaLbgGUgaJW2mfi0/exec'
+      const formsub = document.forms['google-sheet']
+    
+      formsub.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURLs, { method: 'POST', body: new FormData(formsub)})
+          .then(response => alert("We have booked your slot. We will mail you soon regarding this!!"))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
