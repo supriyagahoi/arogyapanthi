@@ -689,12 +689,18 @@ section {
   width: 100%;
   background-color: #acdbec;
   border-radius: 10px;
+  transition: all .3s ease-out 0s; /*added*/
+  transform: translateZ(-1px);
 }
 
 .why-us .icon-boxes .icon-box i {
   font-size: 40px;
   color: #1977cc;
   margin-bottom: 30px;
+}
+
+.why-us .icon-boxes .icon-box:hover{
+  transform: scale(1.04); 
 }
 
 .why-us .icon-boxes .icon-box h4 {
@@ -705,7 +711,7 @@ section {
 
 .why-us .icon-boxes .icon-box p {
   font-size: 15px;
-  color: #848484;
+  color: #413e3e;
 }
 
 /*--------------------------------------------------------------
@@ -936,6 +942,7 @@ section {
   transition: all ease-in-out 0.3s;
   border-radius: 10px;
   background-color: #acdbec;
+  box-shadow: 1px 1px 1px #1977cc;
 }
 
 .services .icon-box .icon {
@@ -989,6 +996,8 @@ section {
 .services .icon-box:hover {
   background: #1977cc;
   border-color: #1977cc;
+  transform: scale(1.04); 
+  box-shadow: 2px 2px 2px;
 }
 
 .services .icon-box:hover .icon {
