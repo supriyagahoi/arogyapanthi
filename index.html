@@ -1035,9 +1035,14 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Book A Demo For FREE! </h4>
             <p>To have a closer look to our services drop your Email here!</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+           <form method="post" autocomplete="off" name="google-sheet">
+              <div class="form-group">
+                  <input type="email" name="Email" class="form-control" placeholder="Your Email *" value="" required=""/>
+              </div>
+              <div class="form-group">
+                  <input type="submit" name="submit" class="btnSubmit btn-block" value="Login" />
+              </div>
+          </form>
           </div>
 
         </div>
