@@ -111,11 +111,14 @@ h1, h2, h3, h4, h5, h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #ffffff;
+/*   background: #ffffff; */
   /* height: 40px; */
-  font-size: 20px;
+  font-size: 15px;
   transition: all 0.5s;
-  z-index: 996;
+  justify-content: flex-end;
+   z-index: 9999; 
+   margin-right: 6rem;
+  /* margin-left: 539px; */
 }
 
 #topbar.topbar-scrolled {
@@ -157,6 +160,13 @@ h1, h2, h3, h4, h5, h6 {
 
 #topbar .social-links a:first-child {
   border-left: 0;
+}
+@media (max-width: 1000px) {
+  #topbar{
+  display:none;
+  z-index:-3px;
+  visibility: hidden;
+  }
 }
 
 /*--------------------------------------------------------------
