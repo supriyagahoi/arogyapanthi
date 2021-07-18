@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 #topbar {
 /*   background: #ffffff; */
   /* height: 40px; */
-  font-size: 15px;
+  font-size: 25px;
   transition: all 0.5s;
   justify-content: flex-end;
    z-index: 9999; 
